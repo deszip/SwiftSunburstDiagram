@@ -34,6 +34,11 @@
 		D958F2D826F51A0F009B9742 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D958F2D726F51A0F009B9742 /* Assets.xcassets */; };
 		D958F2DB26F51A0F009B9742 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D958F2DA26F51A0F009B9742 /* Preview Assets.xcassets */; };
 		D958F2E126F51A3C009B9742 /* SunburstDiagram in Frameworks */ = {isa = PBXBuildFile; productRef = D958F2E026F51A3C009B9742 /* SunburstDiagram */; };
+		D9C2131E271B40480075C1E8 /* SettingsNodesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C7F13D22B9CE95008B461C /* SettingsNodesView.swift */; };
+		D9C2131F271B40560075C1E8 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C7F13B22B9C5EE008B461C /* RootView.swift */; };
+		D9C21320271B40560075C1E8 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A57BA622B873190044FF2B /* SettingsView.swift */; };
+		D9C21321271B405E0075C1E8 /* SettingsNewNodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C7F14122B9F4EE008B461C /* SettingsNewNodeView.swift */; };
+		D9C21322271B405E0075C1E8 /* IfLetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C7F13F22B9F35B008B461C /* IfLetView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -360,7 +365,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9C21320271B40560075C1E8 /* SettingsView.swift in Sources */,
+				D9C2131F271B40560075C1E8 /* RootView.swift in Sources */,
+				D9C2131E271B40480075C1E8 /* SettingsNodesView.swift in Sources */,
 				D958F2D626F51A0D009B9742 /* ContentView.swift in Sources */,
+				D9C21321271B405E0075C1E8 /* SettingsNewNodeView.swift in Sources */,
+				D9C21322271B405E0075C1E8 /* IfLetView.swift in Sources */,
 				D958F2D426F51A0D009B9742 /* SunburstMacApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

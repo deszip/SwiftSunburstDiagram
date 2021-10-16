@@ -13,36 +13,8 @@ import SunburstDiagram
 struct SunburstMacApp: App {
     var body: some Scene {
         WindowGroup {
-//            ContentView(configuration: SunburstConfiguration(nodes: [
-//                Node(name: "Walking",
-//                     showName: true,
-//                     image: UIImage(named: "walking"),
-//                     value: 10.0,
-//                     backgroundColor: .systemBlue, children: [
-//                        Node(name: "Day",
-//                             showName: true,
-//                             image: UIImage(named: "walking"),
-//                             value: 10.0,
-//                             backgroundColor: .systemBlue),
-//                        Node(name: "Night",
-//                             showName: true,
-//                             image: UIImage(named: "walking"),
-//                             value: 15.0,
-//                             backgroundColor: .systemBlue),
-//                     ]),
-//                Node(name: "Restaurant",
-//                     showName: true,
-//                     image: UIImage(named: "eating"),
-//                     value: 10.0,
-//                     backgroundColor: .systemRed),
-//                Node(name: "Home",
-//                     showName: true,
-//                     image: UIImage(named: "house"),
-//                     value: 10.0,
-//                     backgroundColor: .systemTeal)
-//            ], calculationMode: .parentIndependent()))
-            
-            ContentView(configuration: SunburstConfiguration(nodes: nodeTree(at: URL(fileURLWithPath: "/tmp")), calculationMode: .parentIndependent()))
+            let tree = nodeTree(at: URL(fileURLWithPath: "/tmp"))
+            ContentView(configuration: SunburstConfiguration(nodes: tree, calculationMode: .parentIndependent()))
         }
     }
     
@@ -50,18 +22,20 @@ struct SunburstMacApp: App {
         var isDir: ObjCBool = false
         if FileManager.default.fileExists(atPath: url.path, isDirectory: &isDir) {
             if isDir.boolValue {
-                print("Going into \(url)")
                 do {
                     return try FileManager.default.contentsOfDirectory(atPath: url.path).map {
-                        nodeTree(at: URL(fileURLWithPath: $0))
-                    }.flatMap { $0 }
+                        let children = nodeTree(at: url.appendingPathComponent($0))
+                        return Node(name: url.lastPathComponent, showName: true, image: nil, value: 0, backgroundColor: nil, children:children)
+                    }.compactMap { $0 }
                 } catch {
-                    //...
+                    print(error)
                 }
             } else {
-                print("Mapping \(url)")
-                return [Node(name: url.lastPathComponent, showName: true, image: nil, value: metric(for: FileManager.default.contents(atPath: url.absoluteString)!), backgroundColor: nil, children: [])]
+                let content = FileManager.default.contents(atPath: url.path) ?? Data()
+                return [Node(name: url.lastPathComponent, showName: true, image: nil, value: metric(for: content), backgroundColor: nil, children: [])]
             }
+        } else {
+            print("\(url) does not exist")
         }
         
         return []

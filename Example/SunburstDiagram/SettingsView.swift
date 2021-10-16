@@ -106,7 +106,8 @@ struct SettingsView: View {
                         Text(configuration.focusedNode == nil ? "none" : configuration.focusedNode!.name).foregroundColor(Color.secondary)
                     }
                 }
-            }.navigationBarTitle(Text("Configuration"))
+            }
+            //.navigationBarTitle(Text("Configuration"))
         }
     }
 }

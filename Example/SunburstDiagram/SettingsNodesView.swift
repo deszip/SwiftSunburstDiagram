@@ -33,9 +33,10 @@ struct SettingsNodesView: View {
     fileprivate func nodeCellFor(_ node: Node) -> some View {
         return NavigationLink(destination: SettingsNodesView(nodes: node.children)) {
             HStack {
-                IfLet(node.image) { image in
-                    Image(uiImage: image).renderingMode(.template)
-                }
+//                IfLet(node.image) { image in
+//                    UIImage(uiImage: image).renderingMode(.template)
+//                }
+//              UIImage(uiImage: node.image).renderingMode(.template)
                 Text(node.name)
                 Spacer()
                 Text(node.children.count == 0 ? "Leaf node" : "\(node.children.count) child nodes").foregroundColor(Color.secondary)
