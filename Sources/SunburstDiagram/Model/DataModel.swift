@@ -9,7 +9,24 @@
 import Combine
 import Foundation
 import SwiftUI
+
+#if canImport(UIKit)
 import UIKit
+#endif
+
+#if os(macOS)
+import Cocoa
+import AppKit
+
+public typealias UIImage = NSImage
+public typealias UIColor = NSColor
+
+extension Image {
+    init?(uiImage: UIImage) {
+        self.init(nsImage: uiImage)
+    }
+}
+#endif
 
 // TODO: Callbacks & functions:
 // - Did select node - only support single selection

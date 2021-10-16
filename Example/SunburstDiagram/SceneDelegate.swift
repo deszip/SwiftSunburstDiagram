@@ -15,7 +15,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate, UISplitViewControllerDe
     var window: UIWindow?
     
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-
         let configuration = SunburstConfiguration(nodes: sampleNodes(), calculationMode: .ordinalFromLeaves)
         configuration.expandedArcThickness = 52.0
         configuration.maximumExpandedRingsShownCount = 2

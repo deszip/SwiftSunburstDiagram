@@ -29,6 +29,11 @@
 		82C7F13C22B9C5EE008B461C /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C7F13B22B9C5EE008B461C /* RootView.swift */; };
 		82C7F14022B9F35C008B461C /* IfLetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C7F13F22B9F35B008B461C /* IfLetView.swift */; };
 		82C7F14222B9F4EE008B461C /* SettingsNewNodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C7F14122B9F4EE008B461C /* SettingsNewNodeView.swift */; };
+		D958F2D426F51A0D009B9742 /* SunburstMacApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D958F2D326F51A0D009B9742 /* SunburstMacApp.swift */; };
+		D958F2D626F51A0D009B9742 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D958F2D526F51A0D009B9742 /* ContentView.swift */; };
+		D958F2D826F51A0F009B9742 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D958F2D726F51A0F009B9742 /* Assets.xcassets */; };
+		D958F2DB26F51A0F009B9742 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D958F2DA26F51A0F009B9742 /* Preview Assets.xcassets */; };
+		D958F2E126F51A3C009B9742 /* SunburstDiagram in Frameworks */ = {isa = PBXBuildFile; productRef = D958F2E026F51A3C009B9742 /* SunburstDiagram */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +58,12 @@
 		82C7F13D22B9CE95008B461C /* SettingsNodesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsNodesView.swift; sourceTree = "<group>"; };
 		82C7F13F22B9F35B008B461C /* IfLetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IfLetView.swift; sourceTree = "<group>"; };
 		82C7F14122B9F4EE008B461C /* SettingsNewNodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsNewNodeView.swift; sourceTree = "<group>"; };
+		D958F2D126F51A0D009B9742 /* SunburstMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SunburstMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D958F2D326F51A0D009B9742 /* SunburstMacApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunburstMacApp.swift; sourceTree = "<group>"; };
+		D958F2D526F51A0D009B9742 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D958F2D726F51A0F009B9742 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D958F2DA26F51A0F009B9742 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D958F2DC26F51A0F009B9742 /* SunburstMac.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SunburstMac.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +83,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D958F2CE26F51A0D009B9742 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D958F2E126F51A3C009B9742 /* SunburstDiagram in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -80,6 +99,7 @@
 			children = (
 				430D470322AF77B300A7FA6E /* SunburstDiagram */,
 				821B055C24A3FA2F000388EC /* SunburstDiagramDemoTV */,
+				D958F2D226F51A0D009B9742 /* SunburstMac */,
 				430D470222AF77B300A7FA6E /* Products */,
 				430D473622B1FF2A00A7FA6E /* Frameworks */,
 			);
@@ -90,6 +110,7 @@
 			children = (
 				430D470122AF77B300A7FA6E /* Sunburst.app */,
 				821B055B24A3FA2F000388EC /* Sunburst.app */,
+				D958F2D126F51A0D009B9742 /* SunburstMac.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -150,6 +171,26 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		D958F2D226F51A0D009B9742 /* SunburstMac */ = {
+			isa = PBXGroup;
+			children = (
+				D958F2D326F51A0D009B9742 /* SunburstMacApp.swift */,
+				D958F2D526F51A0D009B9742 /* ContentView.swift */,
+				D958F2D726F51A0F009B9742 /* Assets.xcassets */,
+				D958F2DC26F51A0F009B9742 /* SunburstMac.entitlements */,
+				D958F2D926F51A0F009B9742 /* Preview Content */,
+			);
+			path = SunburstMac;
+			sourceTree = "<group>";
+		};
+		D958F2D926F51A0F009B9742 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				D958F2DA26F51A0F009B9742 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -193,13 +234,33 @@
 			productReference = 821B055B24A3FA2F000388EC /* Sunburst.app */;
 			productType = "com.apple.product-type.application";
 		};
+		D958F2D026F51A0D009B9742 /* SunburstMac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D958F2DF26F51A0F009B9742 /* Build configuration list for PBXNativeTarget "SunburstMac" */;
+			buildPhases = (
+				D958F2CD26F51A0D009B9742 /* Sources */,
+				D958F2CE26F51A0D009B9742 /* Frameworks */,
+				D958F2CF26F51A0D009B9742 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SunburstMac;
+			packageProductDependencies = (
+				D958F2E026F51A3C009B9742 /* SunburstDiagram */,
+			);
+			productName = SunburstMac;
+			productReference = D958F2D126F51A0D009B9742 /* SunburstMac.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		430D46F922AF77B300A7FA6E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1150;
+				LastSwiftUpdateCheck = 1300;
 				LastUpgradeCheck = 1100;
 				ORGANIZATIONNAME = "Ludovic Landry";
 				TargetAttributes = {
@@ -208,6 +269,9 @@
 					};
 					821B055A24A3FA2F000388EC = {
 						CreatedOnToolsVersion = 11.5;
+					};
+					D958F2D026F51A0D009B9742 = {
+						CreatedOnToolsVersion = 13.0;
 					};
 				};
 			};
@@ -226,6 +290,7 @@
 			targets = (
 				430D470022AF77B300A7FA6E /* SunburstDiagramDemo */,
 				821B055A24A3FA2F000388EC /* SunburstDiagramDemoTV */,
+				D958F2D026F51A0D009B9742 /* SunburstMac */,
 			);
 		};
 /* End PBXProject section */
@@ -248,6 +313,15 @@
 				821B056824A3FA30000388EC /* LaunchScreen.storyboard in Resources */,
 				821B056524A3FA30000388EC /* Preview Assets.xcassets in Resources */,
 				821B056224A3FA30000388EC /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D958F2CF26F51A0D009B9742 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D958F2DB26F51A0F009B9742 /* Preview Assets.xcassets in Resources */,
+				D958F2D826F51A0F009B9742 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,6 +353,15 @@
 				821B057224A3FAB0000388EC /* SettingsNewNodeView.swift in Sources */,
 				821B057324A3FAB0000388EC /* IfLetView.swift in Sources */,
 				821B056F24A3FAB0000388EC /* RootView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D958F2CD26F51A0D009B9742 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D958F2D626F51A0D009B9742 /* ContentView.swift in Sources */,
+				D958F2D426F51A0D009B9742 /* SunburstMacApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -516,6 +599,68 @@
 			};
 			name = Release;
 		};
+		D958F2DD26F51A0F009B9742 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_ENTITLEMENTS = SunburstMac/SunburstMac.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SunburstMac/Preview Content\"";
+				DEVELOPMENT_TEAM = AM5334753U;
+				ENABLE_HARDENED_RUNTIME = NO;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2021 Ludovic Landry. All rights reserved.";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = SP.SunburstMac;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		D958F2DE26F51A0F009B9742 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_ENTITLEMENTS = SunburstMac/SunburstMac.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SunburstMac/Preview Content\"";
+				DEVELOPMENT_TEAM = AM5334753U;
+				ENABLE_HARDENED_RUNTIME = NO;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2021 Ludovic Landry. All rights reserved.";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = SP.SunburstMac;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -546,6 +691,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		D958F2DF26F51A0F009B9742 /* Build configuration list for PBXNativeTarget "SunburstMac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D958F2DD26F51A0F009B9742 /* Debug */,
+				D958F2DE26F51A0F009B9742 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -554,6 +708,10 @@
 			productName = SunburstDiagram;
 		};
 		821B056D24A3FAA0000388EC /* SunburstDiagram */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SunburstDiagram;
+		};
+		D958F2E026F51A3C009B9742 /* SunburstDiagram */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = SunburstDiagram;
 		};
